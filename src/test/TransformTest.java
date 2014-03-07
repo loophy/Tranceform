@@ -103,4 +103,11 @@ public class TransformTest {
 		System.out.println(e);
 		assertEquals("入力した数列の書式が不正です。(HINT:ローマ数列は<IVXLCDM>で表現します)", e);
 	}
+	@Test //ローマ字の書式で同一種が４回以上連続で入力されているとエラーを返す
+	public void testローマ数列とアラビ数列の混合した文字列入力するとエラーが返ってくる() {
+		Transform transform = new Transform();
+		String e = transform.ans("IV2");
+		System.out.println(e);
+		assertEquals("入力した数列の書式が不正です。(HINT:ローマ数列は<IVXLCDM>で表現します)", e);
+	}
 }
